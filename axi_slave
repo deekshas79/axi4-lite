@@ -5,7 +5,7 @@
 // 
 // Create Date: 27.04.2026 21:48:39
 // Design Name: 
-// Module Name: read_module
+// Module Name: axi_lite_slave
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,9 +20,27 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module write_address_channel(
-    input reg [31:0] s_axi_wdata,
-    input reg [
+module axi_lite_slave(
+
+    // Write Address channel
+    input wire awvalid,
+    input wire [4:0] awaddr,
+    output reg awready,
+    awprot
+    
+    // Write Data channel
+    input wire wvalid,
+    input wire [31:0] wdata,
+    output reg wready,
+    wstrb
+    
+    // Write Response channel
+    output reg bvalid,
+    output reg bresp,
+    input wire bready,
+    
+    // Read Address channel
+    
 
     );
 endmodule
